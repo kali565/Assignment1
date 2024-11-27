@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Assignment1</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="pleaselogintocontinue">Please Log In to continue.</string>
+    <string name="skip"><b>SKIP</b></string>
+    <string name="i_agree_to_the_following">I agree to the following</string>
+    <string name="cont">Continue</string>
+    <string name="privacyLogin"><u> Privacy Policy,</u></string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="bean_blend_code"><b>Bean Blend Code!</b></string>
+    <string name="designAQuickNumVerfication">Design a quick 4-digit PIN for a delightful entry into our coffeehouse</string>
+    <string name="enter4DigitPinNumVerification">Enter 4 Digit PIN</string>
+    <string name="setPinNumVerificatio">Set PIN</string>
+    <string name="confirm4DigitPinNumVerification">Confirm 4 Digit Pin</string>
+    <string name="invalidMobileNumber">Invalid mobile number</string>
+    <string name="sameCharacters">All Characters are same</string>
+    <string name="pleaseEnterMobileNumber">Please Enter mobile number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="verifyMobileNumber">Verify Mobile Number</string>
+    <string name="otpWasSentTo">OTP was sent to : +91 </string>
+    <string name="hiiWeHave">Hi! We have sent you a one-time password at \n+91 %s Please enter the password below</string>
+    <string name="yourPassword">Your password may take a few moments to arrive.</string>
+    <string name="pinDoesNotMatch">Pin does Not match</string>
+    <string name="enter_pin">Enter Pin</string>
+    <string name="please_enter_otp">please enter otp</string>
+    <string name="reenter_pin">reEnter Pin</string>
+    <string name="agreeToConditions">Agree to conditions</string>
+    <string name="terms_and_conditions"><u>Terms and Conditions</u></string>
+    <string name="number">number</string>
+</resources>

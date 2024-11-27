@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="62dp"
+        android:background="#c4c4c4"
+        android:elevation="2dp"
+        app:layout_constraintBottom_toBottomOf="@id/editTextLogin"
+        app:layout_constraintStart_toStartOf="@id/editTextLogin"
+        app:layout_constraintTop_toTopOf="@id/editTextLogin" />
+
+    <EditText
+        android:id="@+id/editTextLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="34dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/button_rectangle_24"
+        android:drawableStart="@drawable/group_265241"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/circe_regular"
+        android:hint="@string/mobile_number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:minEms="10"
+        android:paddingStart="9dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="14dp"
+        android:textColorHint="@color/lightgray_969696"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="34dp"
+        android:layout_marginTop="0dp"
+        android:textColor="@color/red"
+        android:textSize="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogin"
+        app:layout_constraintStart_toStartOf="@+id/editTextLogin"
+        app:layout_constraintEnd_toEndOf="@+id/editTextLogin"
+        android:visibility="visible"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/group_338420"
+        tools:context=".OtpVerification">
+
+        <ImageView
+            android:id="@+id/mobileIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="83.0dp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/group_306080"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backOtp"
+            android:layout_width="20dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="50.0dp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/verifyMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58.0dp"
+            android:fontFamily="@font/circe_bold"
+            android:text="@string/verifyMobileNumber"
+            android:textColor="@color/brown"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="@id/backOtp"
+            app:layout_constraintTop_toBottomOf="@+id/backOtp"
+
+            />
+
+        <TextView
+            android:id="@+id/otpWasSent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/circe_regular"
+            android:textColor="@color/brown"
+            android:textSize="13dp"
+            app:layout_constraintStart_toStartOf="@id/verifyMobile"
+            app:layout_constraintTop_toBottomOf="@+id/verifyMobile"
+
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rectangle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/otpWasSent">
+
+
+            <TextView
+                android:id="@+id/hiWeHave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="50dp"
+
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/pin1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/inputrectangle_24"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hiWeHave"
+                app:layout_goneMarginStart="26dp" />
+
+            <EditText
+                android:id="@+id/pin2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/inputrectangle_24"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                app:layout_constraintBottom_toBottomOf="@id/pin1"
+                app:layout_constraintStart_toEndOf="@id/pin1"
+                app:layout_constraintTop_toTopOf="@id/pin1" />
+
+            <EditText
+                android:id="@+id/pin3"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/inputrectangle_24"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                app:layout_constraintBottom_toBottomOf="@id/pin2"
+                app:layout_constraintStart_toEndOf="@id/pin2"
+                app:layout_constraintTop_toTopOf="@id/pin2" />
+
+            <EditText
+                android:id="@+id/pin4"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/inputrectangle_24"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                app:layout_constraintBottom_toBottomOf="@id/pin3"
+                app:layout_constraintStart_toEndOf="@id/pin3"
+                app:layout_constraintTop_toTopOf="@id/pin3" />
+
+            <EditText
+                android:id="@+id/pin5"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/inputrectangle_24"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                app:layout_constraintBottom_toBottomOf="@id/pin4"
+                app:layout_constraintStart_toEndOf="@id/pin4"
+                app:layout_constraintTop_toTopOf="@id/pin4" />
+
+            <EditText
+                android:id="@+id/pin6"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="7dp"
+                android:background="@drawable/inputrectangle_24"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                app:layout_constraintBottom_toBottomOf="@id/pin5"
+
+
+                app:layout_constraintStart_toEndOf="@id/pin5"
+                app:layout_constraintTop_toTopOf="@id/pin5" />
+
+            <TextView
+                android:id="@+id/errorMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@id/pin6"
+                app:layout_constraintStart_toStartOf="@id/pin1"
+                app:layout_constraintTop_toBottomOf="@id/pin1" />
+
+            <TextView
+                android:id="@+id/yourPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="63dp"
+                android:layout_marginTop="66dp"
+                android:layout_marginEnd="63dp"
+                android:text="@string/yourPassword"
+                android:textColor="@color/gray41"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pin1" />
+
+            <Button
+                android:id="@+id/continueButtonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button"
+                android:fontFamily="@font/circe_regular"
+                android:paddingVertical="14dp"
+                android:text="@string/cont"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+
+
+                app:layout_constraintTop_toBottomOf="@id/yourPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
