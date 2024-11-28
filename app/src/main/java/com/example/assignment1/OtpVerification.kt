@@ -8,16 +8,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.text.TextWatcher
 import androidx.databinding.DataBindingUtil
-import com.example.assignment1.databinding.FragmentOtpVerificationBinding
-import java.util.zip.Inflater
+import com.example.assignment1.databinding.OtpVerificationBinding
 
 class OtpVerification : Fragment(), View.OnClickListener {
-    private lateinit var binding: FragmentOtpVerificationBinding
+    private lateinit var binding: OtpVerificationBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_otp_verification,container,false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.otp_verification,container,false)
         return binding.root
     }
 
@@ -87,7 +86,7 @@ class OtpVerification : Fragment(), View.OnClickListener {
                 binding.pin6.text.toString()
         if (inputPin.trim().length == 6) {
             requireActivity().supportFragmentManager.beginTransaction()
-                .replace(R.id.container1, NumberVerification()).commit()
+                .replace(R.id.container1, PinVerification()).commit()
         } else binding.errorMsg.text = getString(R.string.please_enter_otp)
 
     }

@@ -95,17 +95,19 @@
                 android:maxLength="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/hiWeHave"
+                app:layout_constraintEnd_toStartOf="@id/pin2"
                 app:layout_goneMarginStart="26dp" />
 
             <EditText
                 android:id="@+id/pin2"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="7dp"
+
                 android:background="@drawable/inputrectangle_24"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
+                app:layout_constraintEnd_toStartOf="@id/pin3"
                 app:layout_constraintBottom_toBottomOf="@id/pin1"
                 app:layout_constraintStart_toEndOf="@id/pin1"
                 app:layout_constraintTop_toTopOf="@id/pin1" />
@@ -114,11 +116,12 @@
                 android:id="@+id/pin3"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="7dp"
+
                 android:background="@drawable/inputrectangle_24"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
+                app:layout_constraintEnd_toStartOf="@id/pin4"
                 app:layout_constraintBottom_toBottomOf="@id/pin2"
                 app:layout_constraintStart_toEndOf="@id/pin2"
                 app:layout_constraintTop_toTopOf="@id/pin2" />
@@ -127,11 +130,12 @@
                 android:id="@+id/pin4"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="7dp"
+
                 android:background="@drawable/inputrectangle_24"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
+                app:layout_constraintEnd_toStartOf="@id/pin5"
                 app:layout_constraintBottom_toBottomOf="@id/pin3"
                 app:layout_constraintStart_toEndOf="@id/pin3"
                 app:layout_constraintTop_toTopOf="@id/pin3" />
@@ -140,11 +144,12 @@
                 android:id="@+id/pin5"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="7dp"
+
                 android:background="@drawable/inputrectangle_24"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
+                app:layout_constraintEnd_toStartOf="@id/pin6"
                 app:layout_constraintBottom_toBottomOf="@id/pin4"
                 app:layout_constraintStart_toEndOf="@id/pin4"
                 app:layout_constraintTop_toTopOf="@id/pin4" />
@@ -153,14 +158,14 @@
                 android:id="@+id/pin6"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="7dp"
+
                 android:background="@drawable/inputrectangle_24"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
                 app:layout_constraintBottom_toBottomOf="@id/pin5"
-
-
+                android:layout_marginEnd="28dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pin5"
                 app:layout_constraintTop_toTopOf="@id/pin5" />
 

@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/pin_background"
 
-        tools:context=".NumberVerification">
+        tools:context=".PinVerification">
 
         <Button
             android:id="@+id/backButtonNumVerification"
@@ -73,11 +73,11 @@
 
             <TextView
                 android:id="@+id/textViewNumVerfication2"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="129dp"
+
                 android:layout_marginTop="41dp"
-                android:layout_marginEnd="127dp"
+
                 android:fontFamily="@font/circe_bold"
                 android:gravity="center"
                 android:text="@string/enter4DigitPinNumVerification"
@@ -90,9 +90,9 @@
             <include
                 android:id="@+id/PinNumVerfication"
                 layout="@layout/pin_input"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+
                 android:layout_marginTop="8dp"
 
                 app:layout_constraintEnd_toEndOf="parent"
@@ -104,11 +104,11 @@
 
             <TextView
                 android:id="@+id/textViewNumVerfication3"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="129dp"
+
                 android:layout_marginTop="19dp"
-                android:layout_marginEnd="127dp"
+
                 android:fontFamily="@font/circe_bold"
                 android:gravity="center"
                 android:text="@string/confirm4DigitPinNumVerification"
@@ -121,9 +121,9 @@
             <include
                 android:id="@+id/PinNumVerfication2"
                 layout="@layout/pin_input"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+
                 android:layout_marginTop="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

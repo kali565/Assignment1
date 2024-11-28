@@ -7,14 +7,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isGone
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.FragmentManager
-import com.example.assignment1.databinding.NumberVerificationBinding
+
+import com.example.assignment1.databinding.PinVerificationBinding
 
 
-class NumberVerification : Fragment() ,View.OnClickListener{
-    private lateinit var binding: NumberVerificationBinding
+class PinVerification : Fragment() ,View.OnClickListener{
+    private lateinit var binding: PinVerificationBinding
 
 
 
@@ -22,7 +22,7 @@ class NumberVerification : Fragment() ,View.OnClickListener{
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater,R.layout.number_verification,container,false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.pin_verification,container,false)
         // Inflate the layout for this fragment
         return binding.root
     }
