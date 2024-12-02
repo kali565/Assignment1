@@ -3,10 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -54,6 +50,7 @@
             android:fontFamily="@font/circe_regular"
             android:textColor="@color/brown"
             android:textSize="13dp"
+
             app:layout_constraintStart_toStartOf="@id/verifyMobile"
             app:layout_constraintTop_toBottomOf="@+id/verifyMobile"
 
@@ -87,15 +84,15 @@
                 android:id="@+id/pin1"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginStart="28dp"
+                android:layout_marginStart="26dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/inputrectangle_24"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
+                app:layout_constraintEnd_toStartOf="@id/pin2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/hiWeHave"
-                app:layout_constraintEnd_toStartOf="@id/pin2"
                 app:layout_goneMarginStart="26dp" />
 
             <EditText
@@ -107,8 +104,8 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                app:layout_constraintEnd_toStartOf="@id/pin3"
                 app:layout_constraintBottom_toBottomOf="@id/pin1"
+                app:layout_constraintEnd_toStartOf="@id/pin3"
                 app:layout_constraintStart_toEndOf="@id/pin1"
                 app:layout_constraintTop_toTopOf="@id/pin1" />
 
@@ -121,8 +118,8 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                app:layout_constraintEnd_toStartOf="@id/pin4"
                 app:layout_constraintBottom_toBottomOf="@id/pin2"
+                app:layout_constraintEnd_toStartOf="@id/pin4"
                 app:layout_constraintStart_toEndOf="@id/pin2"
                 app:layout_constraintTop_toTopOf="@id/pin2" />
 
@@ -135,8 +132,8 @@
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                app:layout_constraintEnd_toStartOf="@id/pin5"
                 app:layout_constraintBottom_toBottomOf="@id/pin3"
+                app:layout_constraintEnd_toStartOf="@id/pin5"
                 app:layout_constraintStart_toEndOf="@id/pin3"
                 app:layout_constraintTop_toTopOf="@id/pin3" />
 
@@ -144,13 +141,12 @@
                 android:id="@+id/pin5"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-
                 android:background="@drawable/inputrectangle_24"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
-                app:layout_constraintEnd_toStartOf="@id/pin6"
                 app:layout_constraintBottom_toBottomOf="@id/pin4"
+                app:layout_constraintEnd_toStartOf="@id/pin6"
                 app:layout_constraintStart_toEndOf="@id/pin4"
                 app:layout_constraintTop_toTopOf="@id/pin4" />
 
@@ -158,13 +154,12 @@
                 android:id="@+id/pin6"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-
+                android:layout_marginEnd="26dp"
                 android:background="@drawable/inputrectangle_24"
                 android:gravity="center"
                 android:inputType="number"
                 android:maxLength="1"
                 app:layout_constraintBottom_toBottomOf="@id/pin5"
-                android:layout_marginEnd="28dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/pin5"
                 app:layout_constraintTop_toTopOf="@id/pin5" />

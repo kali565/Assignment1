@@ -11,8 +11,8 @@
     <string name="bean_blend_code"><b>Bean Blend Code!</b></string>
     <string name="designAQuickNumVerfication">Design a quick 4-digit PIN for a delightful entry into our coffeehouse</string>
     <string name="enter4DigitPinNumVerification">Enter 4 Digit PIN</string>
-    <string name="setPinNumVerificatio">Set PIN</string>
-    <string name="confirm4DigitPinNumVerification">Confirm 4 Digit Pin</string>
+    <string name="setPinNumVerification">SET PIN</string>
+    <string name="confirm4DigitPinNumVerification">Confirm 4 Digit PIN</string>
     <string name="invalidMobileNumber">Invalid mobile number</string>
     <string name="sameCharacters">All Characters are same</string>
     <string name="pleaseEnterMobileNumber">Please Enter mobile number</string>

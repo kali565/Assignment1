@@ -27,18 +27,19 @@ class OtpVerification : Fragment(), View.OnClickListener {
         moveCursor()
     }
 
-
+    //initialization of text fields
     private fun init() {
         val number = arguments?.getString(getString(R.string.number)).toString()
         //Adding Entered Mobile Number to UI Using %s PlaceHolder
         binding.otpWasSent.text = "${getString(R.string.otpWasSentTo)} ${number}"
         binding.hiWeHave.text = getString(R.string.hiiWeHave,number)
-
     }
+    //calling set on click listener for all buttons
     private fun setClickListener() {
         binding.continueButtonLogin.setOnClickListener(this)
         binding.backOtp.setOnClickListener(this)
     }
+    // function for moving cursor back and fourth in text fields
     private fun moveCursor() {
         val pinFields = listOf(
             binding.pin1,
@@ -77,6 +78,7 @@ class OtpVerification : Fragment(), View.OnClickListener {
             })
         }
     }
+    //function for validating otp
     private fun otpValidation() {
         val inputPin: String = binding.pin1.text.toString() +
                 binding.pin2.text.toString() +
@@ -90,6 +92,7 @@ class OtpVerification : Fragment(), View.OnClickListener {
         } else binding.errorMsg.text = getString(R.string.please_enter_otp)
 
     }
+    //code to handel clicks
     override fun onClick(v: View?) {
         when (v?.id) {
             binding.continueButtonLogin.id -> {

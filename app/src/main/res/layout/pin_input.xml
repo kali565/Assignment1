@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
     <EditText
         android:id="@+id/pin1"
         android:layout_width="48dp"
@@ -15,7 +16,8 @@
         android:maxLength="1"
         app:layout_constraintEnd_toStartOf="@id/pin2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <EditText
         android:id="@+id/pin2"
@@ -26,8 +28,8 @@
         android:gravity="center"
         android:inputType="numberPassword"
         android:maxLength="1"
-        app:layout_constraintEnd_toStartOf="@id/pin3"
         app:layout_constraintBottom_toBottomOf="@id/pin1"
+        app:layout_constraintEnd_toStartOf="@id/pin3"
         app:layout_constraintStart_toEndOf="@id/pin1"
         app:layout_constraintTop_toTopOf="@id/pin1" />
 
@@ -40,8 +42,8 @@
         android:gravity="center"
         android:inputType="numberPassword"
         android:maxLength="1"
-        app:layout_constraintEnd_toStartOf="@id/pin4"
         app:layout_constraintBottom_toBottomOf="@id/pin2"
+        app:layout_constraintEnd_toStartOf="@id/pin4"
         app:layout_constraintStart_toEndOf="@id/pin2"
         app:layout_constraintTop_toTopOf="@id/pin2" />
 
@@ -56,8 +58,8 @@
         android:inputType="numberPassword"
 
         android:maxLength="1"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/pin3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/pin3"
         app:layout_constraintTop_toTopOf="@id/pin3" />
 
@@ -65,10 +67,10 @@
         android:id="@+id/pinError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/red"
-        android:textSize="14dp"
         android:layout_marginTop="5dp"
         android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="@id/pin4"
         app:layout_constraintStart_toStartOf="@id/pin1"
         app:layout_constraintTop_toBottomOf="@id/pin1"

@@ -10,25 +10,29 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.assignment1.databinding.LoginScreenBinding
 
-class LoginScreen : Fragment(),View.OnClickListener {
+class LoginScreen : Fragment(), View.OnClickListener {
     private lateinit var binding: LoginScreenBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,R.layout.login_screen,container,false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.login_screen, container, false)
         return binding.root
     }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-      setClickListner()
+        warningAutomatic()
+        setClickListener()
 
     }
-    private fun setClickListner(){
+
+    private fun setClickListener() {
         binding.continueButtonLogin.setOnClickListener(this)
         binding.skip.setOnClickListener(this)
     }
+
     /*Function for Number Validation
     only 10 digit number and Number With prefix [6,7,8,9]
     Returns true i
@@ -42,26 +46,50 @@ class LoginScreen : Fragment(),View.OnClickListener {
             binding.numberInput.warning.visibility = View.VISIBLE
             binding.numberInput.warning.text = getString(R.string.invalidMobileNumber)
             return false
-        }
-        else if (number.toSet().size == 1) {
-                binding.numberInput.warning.text = getString(R.string.sameCharacters)
-                return false
-            }
-        else {
+        } else if (number.toSet().size == 1) {
+            binding.numberInput.warning.visibility = View.VISIBLE
+            binding.numberInput.warning.text = getString(R.string.sameCharacters)
+            return false
+        } else {
             binding.numberInput.warning.visibility = View.GONE
             return true
         }
 
     }
+    // function to show warning message
+    private fun warningAutomatic() {
+        binding.numberInput.editTextLogin.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(
+                s: CharSequence?,
+                start: Int,
+                count: Int,
+                after: Int
+            ) { //No-Operation
+                }
 
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                binding.numberInput.warning.visibility = View.GONE
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+                if (binding.numberInput.editTextLogin.text.toString().length == 10) {
+                    numValidation()
+                }
+            }
+        })
+    }
+    // Function for handeling Clicks By Overriding onClick Function
     override fun onClick(v: View?) {
-        when(v?.id){
-            binding.continueButtonLogin.id ->{
+        when (v?.id) {
+            binding.continueButtonLogin.id -> {
                 //Code For Continue Button to Load Otp Verification Fragment
                 if (numValidation()) {
                     if (binding.checkbox.isChecked) {
                         val bundle = Bundle()
-                        bundle.putString(getString(R.string.number), binding.numberInput.editTextLogin.text.toString())
+                        bundle.putString(
+                            getString(R.string.number),
+                            binding.numberInput.editTextLogin.text.toString()
+                        )
                         val fragment = OtpVerification()
                         fragment.arguments = bundle
                         parentFragmentManager.beginTransaction().replace(R.id.container1, fragment)
@@ -69,13 +97,16 @@ class LoginScreen : Fragment(),View.OnClickListener {
                     } else {
                         binding.numberInput.warning.visibility = View.VISIBLE
                         binding.numberInput.warning.text = getString(R.string.agreeToConditions)
-                    } } }
+                    }
+                }
+            }
             //Code for Continue Button To load Dashboard Fragment
-            binding.skip.id->{
+            binding.skip.id -> {
                 requireActivity().supportFragmentManager.beginTransaction()
                     .replace(R.id.container1, Dashboard()).commit()
 
             }
         }
     }
+
 }

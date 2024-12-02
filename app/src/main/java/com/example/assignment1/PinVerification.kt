@@ -37,6 +37,7 @@ class PinVerification : Fragment() ,View.OnClickListener{
         binding.continueButtonLogin.setOnClickListener(this)
         binding.backButtonNumVerification.setOnClickListener(this)
     }
+    // function for validating Entered pin
     private fun checkPin(): Boolean {
         val newPin =
             binding.PinNumVerfication.pin1.text.toString() +
@@ -55,6 +56,7 @@ class PinVerification : Fragment() ,View.OnClickListener{
             binding.PinNumVerfication2.pinError.text = getString(R.string.enter_pin)
         return false
     }
+    //function for moving cursor back and fourth in input text fields
     private fun moveCursor() {
         val pinFields = listOf(
 
